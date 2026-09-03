@@ -1,0 +1,241 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+    padding-bottom: 50px;
+}
+
+/* Header & Animasi Judul */
+header {
+    background: linear-gradient(135deg, #6d5517, #5e5436);
+    color: white;
+    padding: 35px 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+header h1 {
+    font-size: 26pt;
+    margin-bottom: 5px;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+header p {
+    font-size: 12pt;
+    opacity: 0.9;
+}
+
+/* Navigasi / Menu Beranda */
+nav {
+    background-color: #c7bfa7;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+/* Styling Link & Tombol Navigasi dengan Animasi Hover */
+nav ul li a {
+    display: inline-block;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 15px 20px;
+    font-weight: bold;
+    font-size: 10.5pt;
+    transition: all 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav ul li a:hover {
+    background-color: #a08635;
+    color: #a08635;
+    border-bottom: 3px solid #a08635;
+    transform: translateY(-2px);
+}
+
+nav ul li a:active {
+    transform: translateY(1px);
+}
+
+/* Layout Konten Utama */
+.container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* Kartu / Section dengan Animasi Fade In */
+.card {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    animation: fadeInUp 0.8s ease-out;
+    border-left: 5px solid #98802a;
+}
+
+.card h2 {
+    color: #98802a;
+    margin-bottom: 15px;
+    font-size: 16pt;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 8px;
+}
+
+.card h3 {
+    color: #98802a;
+    margin: 15px 0 10px 0;
+    font-size: 12pt;
+}
+
+/* PENGATURAN TABEL CSS (Sesuai Modul) */
+.table-custom {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.table-custom th {
+    color: #FFFFFF;
+    background-color: #b8a754;
+    border: 1px solid #b8a754;
+    padding: 12px;
+    font-size: 10pt;
+    text-align: center;
+}
+
+.table-custom td {
+    color: #333333;
+    background-color: #F8F8FF;
+    border: 1px solid #dcdcdc;
+    padding: 10px;
+    font-size: 10pt;
+    text-align: left;
+}
+
+.table-custom td.day {
+    text-align: center;
+    font-weight: bold;
+}
+
+.table-custom tr:nth-child(even) td {
+    background-color: #e6f2ff;
+}
+
+.table-custom tr:hover td {
+    background-color: #d0e4fe;
+    transition: background-color 0.2s ease;
+}
+
+/* List / Daftar */
+ul.custom-list {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+ul.custom-list li {
+    margin-bottom: 8px;
+}
+
+/* Tabel Biodata Tambahan */
+.biodata-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+}
+
+.biodata-table td {
+    padding: 6px 10px;
+    vertical-align: top;
+}
+
+/* Quote / Motto */
+blockquote {
+    background: #eef2f7;
+    border-left: 4px solid #877732;
+    margin: 15px 0;
+    padding: 12px 15px;
+    font-style: italic;
+    color: #c0975a;
+}
+
+/* Tombol Visual 3D Interaktif */
+.btn-3d {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #2927ae;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 0 #2927ae;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.1s ease;
+    margin-top: 10px;
+}
+
+.btn-3d:hover {
+    background-color: #2927ae;
+    box-shadow: 0 3px 0 #2927ae;
+    transform: translateY(1px);
+}
+
+.btn-3d:active {
+    box-shadow: 0 0 0 #2927ae;
+    transform: translateY(4px);
+}
+
+/* Keyframe Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #0f2027;
+    color: #aaa;
+    font-size: 9pt;
+    margin-top: 40px;
+}

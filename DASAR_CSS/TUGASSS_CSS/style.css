@@ -1,0 +1,302 @@
+/* ===================================================
+   TEMA WARNA: NEUTRAL SOFT BROWN & BEIGE
+   Kombinasi warna coklat netral, taupe, dan krem hangat.
+   =================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', 'Segoe UI', Tahoma, sans-serif;
+}
+
+body {
+    /* Latar belakang coklat-keabu (Taupe/Espresso netral) */
+    background: #1c1917; 
+    /* Teks krem soft netral */
+    color: #e7e5e4;
+    line-height: 1.7;
+    padding-bottom: 50px;
+    overflow-x: hidden;
+}
+
+/* HEADER BANNER */
+header {
+    /* Gradient Coklat Netral Soft */
+    background: linear-gradient(135deg, #786253, #57463a);
+    color: #f5f5f4;
+    padding: 45px 20px;
+    text-align: center;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    
+    /* ANIMASI AWAL HALAMAN */
+    animation: introHero 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+header h1 {
+    font-size: 28pt;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+header p {
+    font-size: 12pt;
+    opacity: 0.9;
+    font-weight: 300;
+}
+
+/* NAVIGASI MENU BERANDA Floating Pills */
+nav {
+    background-color: #292524;
+    position: sticky;
+    top: 15px;
+    z-index: 1000;
+    max-width: 800px;
+    margin: -25px auto 30px auto;
+    border-radius: 50px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(231, 229, 228, 0.1);
+    
+    /* ANIMASI AWAL HALAMAN */
+    animation: introNav 1.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 5px;
+}
+
+nav ul li a {
+    display: inline-block;
+    color: #a8a29e;
+    text-decoration: none;
+    padding: 12px 20px;
+    font-weight: 600;
+    font-size: 10pt;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+/* Hover Efek Navigasi - Krem/Warm Beige */
+nav ul li a:hover {
+    background: #a8927f;
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(168, 146, 127, 0.3);
+    transform: translateY(-2px);
+}
+
+/* LAYOUT CONTAINER */
+.container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* CARD SECTION */
+.card {
+    background: #262220;
+    border-radius: 16px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    /* Garis batas atas coklat muda netral */
+    border-top: 4px solid #a8927f;
+    
+    opacity: 0;
+    animation: introCard 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Penundaan Waktu Animasi untuk Setiap Kartu */
+#home { animation-delay: 0.3s; }
+#pendidikan { animation-delay: 0.5s; }
+#jadwal { animation-delay: 0.7s; }
+#aktivitas { animation-delay: 0.9s; }
+#informasi-lain { animation-delay: 1.1s; }
+
+.card h2 {
+    color: #d6c7b2;
+    margin-bottom: 15px;
+    font-size: 16pt;
+    border-bottom: 1px solid rgba(231, 229, 228, 0.1);
+    padding-bottom: 10px;
+}
+
+.card h3 {
+    color: #e7e5e4;
+    margin: 18px 0 10px 0;
+    font-size: 12pt;
+}
+
+/* PENGATURAN TABEL JADWAL */
+.table-custom {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 15px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.table-custom th {
+    color: #ffffff;
+    background-color: #685446;
+    padding: 14px;
+    font-size: 10pt;
+    text-align: center;
+}
+
+.table-custom td {
+    color: #d6d3d1;
+    background-color: #1c1917;
+    padding: 12px;
+    font-size: 10pt;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.table-custom td.day {
+    text-align: center;
+    font-weight: bold;
+    color: #d6c7b2;
+}
+
+.table-custom tr:nth-child(even) td {
+    background-color: #221e1c;
+}
+
+.table-custom tr:hover td {
+    background-color: #44372e;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+/* LIST / DAFTAR */
+ul.custom-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+ul.custom-list li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 10px;
+}
+
+ul.custom-list li::before {
+    content: "➢";
+    position: absolute;
+    left: 0;
+    color: #a8927f;
+    font-size: 11pt;
+}
+
+/* TABEL BIODATA SINGKAT */
+.biodata-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+}
+
+.biodata-table td {
+    padding: 8px 10px;
+    vertical-align: top;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.08);
+}
+
+.biodata-table td.label {
+    font-weight: 600;
+    color: #a8927f;
+    width: 30%;
+}
+
+.biodata-table td.val {
+    color: #f5f5f4;
+}
+
+/* MOTTO HIDUP */
+blockquote {
+    background: rgba(168, 146, 127, 0.1);
+    border-left: 4px solid #a8927f;
+    margin: 15px 0;
+    padding: 15px 20px;
+    font-style: italic;
+    color: #e7e5e4;
+    border-radius: 0 10px 10px 0;
+}
+
+/* TOMBOL VISUAL 3D */
+.btn-3d {
+    display: inline-block;
+    padding: 12px 25px;
+    color: #fff;
+    background: linear-gradient(135deg, #685446, #524237);
+    border: none;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-top: 10px;
+}
+
+.btn-3d:hover {
+    transform: translateY(-3px);
+    background: linear-gradient(135deg, #786253, #5e4d41);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.btn-3d:active {
+    transform: translateY(1px);
+}
+
+/* ANIMASI KEYFRAMES */
+@keyframes introHero {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px) scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes introNav {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes introCard {
+    0% {
+        opacity: 0;
+        transform: translateY(40px) scale(0.96);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 25px;
+    background-color: #141210;
+    color: #78716c;
+    font-size: 9pt;
+    margin-top: 50px;
+}
