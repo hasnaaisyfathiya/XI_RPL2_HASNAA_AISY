@@ -1,0 +1,821 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+/* ==================================================
+   RESET
+================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #5B5956;
+    color: #292929;
+    line-height: 1.7;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid #e5e3df;
+}
+
+.nav-wrapper {
+    width: 90%;
+    max-width: 1250px;
+    min-height: 75px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    text-decoration: none;
+    color: #181818;
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: #999;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.nav-menu a {
+    position: relative;
+    text-decoration: none;
+    color: #777;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    color: #111;
+}
+
+.nav-menu a::after {
+    content: "";
+    position: absolute;
+    bottom: -7px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: #222;
+    transform: translateX(-50%);
+    transition: 0.3s;
+}
+
+.nav-menu a:hover::after,
+.nav-menu a.active::after {
+    width: 100%;
+}
+
+/* ========================================
+   LOGO
+======================================== */
+
+.logo {
+    position: relative;
+
+    color: #181818;
+
+    text-decoration: none;
+
+    font-size: 25px;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    transition: 0.3s ease;
+}
+
+.logo span {
+    color: #999;
+}
+
+.logo:hover {
+    letter-spacing: 3px;
+}
+
+
+/* ========================================
+   MENU
+======================================== */
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+
+    gap: 27px;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.nav-menu li {
+    position: relative;
+}
+
+.nav-menu li a {
+    position: relative;
+
+    display: block;
+
+    padding: 10px 0;
+
+    color: #777;
+
+    text-decoration: none;
+
+    font-size: 12px;
+    font-weight: 500;
+
+    transition: 0.3s ease;
+}
+
+
+/* Hover */
+
+.nav-menu li a:hover {
+    color: #151515;
+}
+
+
+/* ========================================
+   GARIS MENU
+======================================== */
+
+.nav-menu li a::before {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    bottom: 3px;
+
+    width: 0;
+    height: 2px;
+
+    background: #222;
+
+    border-radius: 20px;
+
+    transform: translateX(-50%);
+
+    transition: 0.35s ease;
+}
+
+.nav-menu li a:hover::before {
+    width: 100%;
+}
+
+
+/* ========================================
+   MENU AKTIF
+======================================== */
+
+.nav-menu li a.active {
+    color: #111;
+
+    font-weight: 700;
+}
+
+.nav-menu li a.active::before {
+    width: 100%;
+}
+
+
+/* ========================================
+   TOMBOL PROFIL
+======================================== */
+
+.profil-button {
+    display: flex;
+
+    align-items: center;
+    gap: 10px;
+
+    padding: 12px 18px;
+
+    background: #1d1d1d;
+
+    color: #fff;
+
+    text-decoration: none;
+
+    border-radius: 30px;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    transition: all 0.35s ease;
+}
+
+.profil-button span {
+    font-size: 15px;
+
+    transition: 0.3s ease;
+}
+
+.profil-button:hover {
+    background: #3b3b3b;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.profil-button:hover span {
+    transform: translateX(4px);
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 1050px) {
+
+    .nav-wrapper {
+        flex-wrap: wrap;
+
+        padding: 15px 0;
+    }
+
+    .nav-menu {
+        order: 3;
+
+        width: 100%;
+
+        justify-content: center;
+
+        padding-top: 12px;
+
+        gap: 20px;
+    }
+}
+
+
+/* ========================================
+   TABLET KECIL
+======================================== */
+
+@media (max-width: 750px) {
+
+    .nav-wrapper {
+        width: 90%;
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+
+    .nav-menu {
+        gap: 14px 18px;
+    }
+
+    .nav-menu li a {
+        font-size: 11px;
+    }
+
+    .profil-button {
+        padding: 10px 15px;
+    }
+}
+
+
+/* ========================================
+   HP
+======================================== */
+
+@media (max-width: 550px) {
+
+    .nav-wrapper {
+        min-height: auto;
+
+        padding: 16px 0;
+    }
+
+    .profil-button {
+        display: none;
+    }
+
+    .nav-menu {
+        gap: 8px 15px;
+    }
+
+    .nav-menu li a {
+        font-size: 10px;
+    }
+
+    .nav-menu li a::before {
+        height: 1px;
+    }
+}
+
+/* =========================
+   HOME
+========================= */
+.home-page {
+    min-height: calc(100vh - 75px);
+    display: flex;
+    align-items: center;
+
+    background:
+        radial-gradient(circle at 10% 20%, #e8e5de 0, transparent 25%),
+        radial-gradient(circle at 90% 80%, #dedbd4 0, transparent 25%),
+        #f7f6f3;
+}
+
+.home-container {
+    width: 90%;
+    max-width: 1150px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 70px;
+}
+
+.home-text {
+    max-width: 600px;
+    animation: munculKiri 1s ease;
+}
+
+.home-label {
+    font-size: 12px;
+    letter-spacing: 4px;
+    color: #888;
+    margin-bottom: 15px;
+}
+
+.home-text h1 {
+    font-size: 55px;
+    line-height: 1.15;
+    margin-bottom: 15px;
+}
+
+.home-text h1 span {
+    color: #777;
+}
+
+.home-text h3 {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 18px;
+    color: #555;
+}
+
+.home-text p {
+    color: #777;
+    max-width: 520px;
+}
+
+.home-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.home-buttons a {
+    text-decoration: none;
+    padding: 13px 22px;
+    border-radius: 30px;
+    background: #222;
+    color: white;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.home-buttons a:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.home-buttons a:last-child {
+    background: transparent;
+    color: #222;
+    border: 1px solid #bbb;
+}
+
+.home-photo {
+    width: 330px;
+    height: 430px;
+    overflow: hidden;
+    border-radius: 170px 170px 20px 20px;
+    box-shadow: 15px 15px 0 #ddd9d0;
+    animation: munculKanan 1s ease;
+}
+
+.home-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* ==================================================
+   SECTION
+================================================== */
+
+section {
+    width: 90%;
+    max-width: 1100px;
+
+    margin: 70px auto;
+
+    padding: 55px 50px;
+
+    background-color: #ffffff;
+
+    border: 1px solid #e6e6e6;
+
+    border-radius: 12px;
+
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.04);
+}
+
+section h2 {
+    margin-bottom: 35px;
+
+    text-align: center;
+
+    font-size: 28px;
+
+    color: #222;
+}
+
+section h2::after {
+    content: "";
+
+    display: block;
+
+    width: 45px;
+    height: 3px;
+
+    margin: 10px auto;
+
+    background-color: #555;
+}
+
+
+/* ==================================================
+   BIODATA
+================================================== */
+
+.biodata {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+}
+
+.biodata div {
+    padding: 20px;
+
+    background-color: #f7f7f5;
+
+    border: 1px solid #e6e6e6;
+
+    border-radius: 8px;
+
+    transition: 0.3s;
+}
+
+.biodata div:hover {
+    background-color: #eeeeec;
+
+    transform: translateY(-3px);
+}
+
+.biodata strong {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #333;
+
+    font-size: 13px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.5px;
+}
+
+
+/* ==================================================
+   DESKRIPSI PRIBADI
+================================================== */
+
+.deskripsi {
+    max-width: 850px;
+
+    margin: auto;
+
+    text-align: center;
+
+    color: #666;
+
+    font-size: 16px;
+}
+
+
+/* ==================================================
+   PENDIDIKAN
+================================================== */
+
+.timeline {
+    max-width: 850px;
+
+    margin: auto;
+}
+
+.timeline-item {
+    margin-bottom: 18px;
+
+    padding: 22px 25px;
+
+    background-color: #f7f7f5;
+
+    border-left: 4px solid #555;
+
+    border-radius: 8px;
+
+    transition: 0.3s;
+}
+
+.timeline-item:hover {
+    transform: translateX(5px);
+
+    background-color: #eeeeec;
+}
+
+.timeline-item h3 {
+    margin-bottom: 5px;
+
+    color: #333;
+
+    font-size: 18px;
+}
+
+.timeline-item p {
+    color: #666;
+}
+
+
+/* ==================================================
+   CARD
+================================================== */
+
+.card-container {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+}
+
+.card {
+    padding: 28px;
+
+    background-color: #f7f7f5;
+
+    border: 1px solid #e5e5e5;
+
+    border-radius: 10px;
+
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
+}
+
+.card h3 {
+    margin-bottom: 8px;
+
+    color: #333;
+}
+
+.card p {
+    color: #666;
+}
+
+
+/* ==================================================
+   LIST
+================================================== */
+
+.list {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+
+    list-style: none;
+}
+
+.list li {
+    padding: 16px 20px;
+
+    background-color: #f7f7f5;
+
+    border: 1px solid #e5e5e5;
+
+    border-radius: 8px;
+
+    color: #555;
+}
+
+.list li::before {
+    content: "✓";
+
+    margin-right: 10px;
+
+    color: #333;
+
+    font-weight: bold;
+}
+
+
+/* ==================================================
+   GALERI
+================================================== */
+
+.galeri {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+.galeri div {
+    height: 250px;
+
+    overflow: hidden;
+
+    border-radius: 10px;
+
+    background-color: #eee;
+
+    border: 1px solid #ddd;
+}
+
+.galeri img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: 0.4s;
+}
+
+.galeri img:hover {
+    transform: scale(1.05);
+}
+
+
+/* =========================
+   PORTOFOLIO
+========================= */
+
+.portfolio {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.portfolio-card {
+    width: 260px;
+    background: #ffffff;
+    border: 1px solid #e5e5e5;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* BAGIAN GAMBAR */
+
+.portfolio-image {
+    width: 100%;
+    height: 340px;
+    overflow: hidden;
+}
+
+.portfolio-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    background: #f5f5f5;
+}
+
+/* BAGIAN TEKS */
+
+.portfolio-content {
+    padding: 18px;
+}
+
+.portfolio-content h3 {
+    margin: 0 0 8px;
+    font-size: 20px;
+    color: #222;
+}
+
+.portfolio-content p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.6;
+    color: #666;
+}
+
+
+/* =========================
+   HP
+========================= */
+
+@media (max-width: 600px) {
+
+    .portfolio {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .portfolio-card {
+        width: 280px;
+    }
+
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+    padding: 30px;
+    text-align: center;
+    background: #222;
+    color: #aaa;
+    font-size: 12px;
+}
+
+/* =========================
+   ANIMATION
+========================= */
+@keyframes munculKiri {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes munculKanan {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
